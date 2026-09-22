@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0f19">
+  <title>Signal Terminal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080b12;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #202635;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .status {
+      font-size: 12px;
+      color: #35e59a;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .hero {
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #8f98aa;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .stat {
+      background: #101521;
+      border: 1px solid #202838;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .stat small {
+      color: #8f98aa;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .stat strong {
+      font-size: 22px;
+    }
+
+    .signals {
+      display: grid;
+      gap: 12px;
+    }
+
+    .signal {
+      background: #101521;
+      border: 1px solid #202838;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .signal-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .asset {
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .buy {
+      color: #35e59a;
+      font-weight: bold;
+    }
+
+    .sell {
+      color: #ff5571;
+      font-weight: bold;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .detail {
+      background: #080b12;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .detail small {
+      color: #7f899d;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .premium {
+      margin-top: 30px;
+      padding: 25px;
+      text-align: center;
+      background: #111827;
+      border: 1px solid #283247;
+      border-radius: 15px;
+    }
+
+    .premium h2 {
+      margin-bottom: 8px;
+    }
+
+    .premium p {
+      color: #929caf;
+      margin-bottom: 18px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 9px;
+      padding: 13px 25px;
+      background: #35e59a;
+      color: #06110c;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    @media (max-width: 650px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .details {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SIGNAL TERMINAL</div>
+  <div class="status">● MARKET ONLINE</div>
+</header>
+
+<div class="container">
+
+  <section class="hero">
+    <h1>Live Trading Signals</h1>
+    <p>Automated market analysis with Entry, Stop Loss and Take Profit.</p>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <small>Signals Today</small>
+      <strong>12</strong>
+    </div>
+
+    <div class="stat">
+      <small>Markets</small>
+      <strong>10</strong>
+    </div>
+
+    <div class="stat">
+      <small>System</small>
+      <strong style="color:#35e59a;">ONLINE</strong>
+    </div>
+  </section>
+
+  <section class="signals">
+
+    <div class="signal">
+      <div class="signal-top">
+        <span class="asset">EUR/USD</span>
+        <span class="buy">BUY</span>
+      </div>
+
+      <div class="details">
+        <div class="detail">
+          <small>Entry</small>
+          1.17620
+        </div>
+
+        <div class="detail">
+          <small>Stop Loss</small>
+          1.17480
+        </div>
+
+        <div class="detail">
+          <small>Take Profit</small>
+          1.17900
+        </div>
+
+        <div class="detail">
+          <small>Strength</small>
+          84%
+        </div>
+      </div>
+    </div>
+
+    <div class="signal">
+      <div class="signal-top">
+        <span class="asset">GBP/USD</span>
+        <span class="sell">SELL</span>
+      </div>
+
+      <div class="details">
+        <div class="detail">
+          <small>Entry</small>
+          1.35210
+        </div>
+
+        <div class="detail">
+          <small>Stop Loss</small>
+          1.35400
+        </div>
+
+        <div class="detail">
+          <small>Take Profit</small>
+          1.34850
+        </div>
+
+        <div class="detail">
+          <small>Strength</small>
+          79%
+        </div>
+      </div>
+    </div>
+
+    <div class="signal">
+      <div class="signal-top">
+        <span class="asset">XAU/USD</span>
+        <span class="buy">BUY</span>
+      </div>
+
+      <div class="details">
+        <div class="detail">
+          <small>Entry</small>
+          3742.50
+        </div>
+
+        <div class="detail">
+          <small>Stop Loss</small>
+          3730.00
+        </div>
+
+        <div class="detail">
+          <small>Take Profit</small>
+          3767.00
+        </div>
+
+        <div class="detail">
+          <small>Strength</small>
+          87%
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="premium">
+    <h2>Unlock PRO Signals</h2>
+    <p>Get full market access, advanced signals and automated alerts.</p>
+    <button>UNLOCK PRO</button>
+  </section>
+
+</div>
+
+</body>
+</html>
